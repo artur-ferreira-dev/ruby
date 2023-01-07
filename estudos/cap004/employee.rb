@@ -30,13 +30,13 @@ class Employee
     end
 =end
     def initialize(name = "Anonymous", salary = 0.0) #quando declarado dessa forma ao criar um novo objeto pra classe podemos setar as variaveis na criação 
-        self.name = name 
+        self.name = name # self é utilizado para referenciar o objeto sobre o qual está sendo chamado
         self.salary = salary
     end
 
     def print_pay_stub
-        puts "Name: #{@name}"
-        pay_for_period = (@salary / 365.0) * 14
+        puts "Name: #{name}" # aqui o self é opcional, pois já foi declarado nos gravadores de atributo.
+        pay_for_period = (self.salary / 365.0) * 14 # deixei o self, para demonstrar que ambos os casos funcionam
         formatted_pay = format("$%.2f", pay_for_period) # format(%.2f) .2 quer dizer que quero apenas duas casas decimais após o ponto no formato float, se quisesse alterar o valor minimo de casas decimais era só colocar quantos numeros gostaria antes do ponto. Tipos mais comuns de format %i(integer) %f (float) %s(string). 
         puts "Pay This Period: #{formatted_pay}"
     end
@@ -44,6 +44,6 @@ end
 
 amy = Employee.new("Amy", 50000) # exemplo criando as variaveis na criação do objeto
 amy.print_pay_stub
-anonymous =  Employee.new # como nao foram declarados as variaveis, é utilizado os valores padrões
-anonymous.print_pay_stub
+anonymous =  Employee.new.print_pay_stub # como nao foram declarados as variaveis, é utilizado os valores padrões / o metodo pode ser declarado junto com a criação do objeto
+
 
