@@ -21,5 +21,17 @@ puts prices.length # mostra o tamanho do array
 puts prices.include?(25.00) # procura valor dentro de um array, resultado booleano
 puts prices.find_index(9.99) # procura valor dentro de um array, quantidade
 
-prices.push(0.99) # inerir elementos em um array
+prices.push(0.99) # inserir elementos em um array
 p prices
+
+prices.pop # remover elementos em um array. pop(quantidade de elementos), deleta os elementos do ultimo para o primeiro, depende da quantidade colocada
+p prices
+
+prices.shift # remove elementos de um array, shift(quantidade de elementos), deleta os elementos do primeiro até o último. dependendo da quantidade colocada
+p prices 
+
+puts ["d", "o", "g"].join # converte arrays em strings
+puts ["d", "o", "g"].join("-")
+
+p "d-o-g".chars # e strings tem metodos para converte-las em arrays
+p "d-o-g".split("-")
