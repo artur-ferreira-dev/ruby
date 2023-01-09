@@ -19,7 +19,7 @@ def refund(prices)
     amount = 0
     index = 0
     while index < prices.length
-        amount -= prices[index]
+        amount -= prices[index] # por ser devolução, o valor é subtraido
         index += 1
     end
     amount
@@ -31,7 +31,7 @@ puts format("%.2f", refund(prices))
 def show_disccounts(prices)
     index = 0
     while index < prices.length
-        amount_off = prices[index] / 3.0
+        amount_off = prices[index] / 3.0 # 1/3
         puts format("Your discount: $%.2f",amount_off)
         index += 1
     end
