@@ -16,7 +16,7 @@ def twice(&my_block)
     puts "In the method, about to call the block!"
     my_block.call # chama o bloco
     puts "Back in the method, about to call the block again!"
-    my_block.call # chama o bloco novamente
+    yield # chama o bloco novamente, usando a palavra-chave que faz o mesmo que my_block.call 
     puts "Back in the method, about to return!"
 end
 
@@ -27,7 +27,7 @@ end
 # Parâmetros de bloco
 
 def give(&my_block)
-    my_block.call("2 turtle doves", "1 partridge")
+    yield("2 turtle doves", "1 partridge")
 end
 # É possível que um bloco aceite um ou mais parâmetros de método. definindo-os entre ||
 give do |present1, present2| # parametros que receberão os parametros definidos no metodo de chamada
