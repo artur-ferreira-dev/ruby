@@ -33,6 +33,6 @@ end
 give do |present1, present2| # parametros que receberão os parametros definidos no metodo de chamada
     puts "My method gave to me..."
     puts present1, present2
-end
+end # blocos iniciados e fechados por chaves também são validos, porém a convenção é que seja todo escrito em apenas uma linha.
 
 
