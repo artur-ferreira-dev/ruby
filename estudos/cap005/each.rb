@@ -9,3 +9,14 @@ end
 my_method { |param | puts param}
 
 ["a", "b", "c"].each { |param | puts param}
+
+class Array
+    def each
+        index = 0
+        while index < self.length
+            yield self[index]
+            index +=1
+        end 
+    end
+end
+
